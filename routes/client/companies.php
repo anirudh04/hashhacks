@@ -42,7 +42,6 @@ $app->get("/companies", function ($request, $response, $arguments) {
 });
 
 
-
 $app->get("/company/{id}", function ($request, $response, $arguments) {
 
   if (false === $companies = $this->spot->mapper("App\Company")->first([

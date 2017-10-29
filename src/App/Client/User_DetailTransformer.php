@@ -24,19 +24,12 @@ class User_DetailTransformer extends Fractal\TransformerAbstract
     public function transform(User $user)
     {
         return [
-            "id" => (integer)$user->user_id ?: null,
+
+            "id" => (integer)$user->user_id ?: 0,
             "user_name" => (string)$user->user_name ?: null,
-            "college" => (string)$user->college ?: null,
-            "email" => (string)$user->email ?: null,
-            "phone" => (integer)$user->phone ?: 0,
             "google_id" => (string)$user->google_id ?: null,
-            "gender" => (string)$user->gender ?: null,
-            "address" => (string)$user->address ?: null,
-            "cv" => (string)$user->cv ?: null,
-            "degree" => (string)$user->degree ?: null,
-            "status" => (string)$user->status ?: null
-            
-            
+            "email" => (string)$user->user_email ?: null,
+            "roll_no" => (integer)$user->roll_no ?: 0
         ];
     }
 }
