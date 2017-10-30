@@ -122,7 +122,7 @@ $app->post("/issue_book", function ($request, $response, $arguments)
 	$user_book['fine'] = 0;
 	
 	if ($check = $this->spot->mapper("App\User_Book")->first([
-		"book_id"=>$body['book_id'],"tag_id"=>$body['tag_id'],"status"=>"Issued"
+		"book_id"=>$body['book_id'],"tag_id"=>$body['tag_id']
 	]))
 	{
 
